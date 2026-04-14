@@ -1,0 +1,19 @@
+{
+  "name": "smart-transport-system",
+  "version": "2.0.0",
+  "description": "Smart Public Transport System - Andhra Pradesh APSRTC Digital Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "init-db": "node database.js",
+    "setup": "node database.js && node server.js"
+  },
+  "keywords": ["transport", "apsrtc", "bus", "andhra-pradesh"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^5.1.7"
+  }
+}
