@@ -1,5 +1,6 @@
+const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./project.db');
+const db = new sqlite3.Database(path.join(__dirname, 'project.db'));
 
 const ALL_SERVICES = [
   {no:"101",from:"Hyderabad", to:"Vijayawada", depot:"Miyapur", reg:"TS09Z1234", type:"Express", depTime:"07:00",
