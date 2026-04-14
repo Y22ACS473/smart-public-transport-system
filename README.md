@@ -1,9 +1,10 @@
-# Smart Public Transport System: APSRTC Digital Portal
+# Smart Public Transport System: Real-Time Bus Tracking, Occupancy Monitoring & Digital Ticketing
 
 ### Authors
-*   **[Your Name]** (Y22ACS473)
-*   Department of Computer Science and Engineering
-*   Bapatla Engineering College
+*   **K Divya** (Y22ACS473)
+*   **A Deva Karuna** (Y22ACS401)
+*   **CH Sravya Lakshmi** (Y22ACS434)
+*   **B Nakshatra** (Y22ACS418)
 
 ---
 
@@ -52,17 +53,16 @@ The system integrates a **Node.js Gateway**, a **Relational SQLite Database**, a
 *   **Express.js**
 *   **SQLite3**
 *   **CORS**
-*   **Path Management**
 
 #### Frontend
-*   **HTML5 & CSS3** (Vanilla implementation)
-*   **JavaScript ES6+**
+*   **HTML & CSS**
+*   **JavaScript**
 *   **Glassmorphism Design System**
 
 #### Cloud & Services
-*   **GitHub** (Version Control)
-*   **Render** (Target Deployment)
-*   **Leaflet.js** (Mapping Visualization)
+*   **GitHub** 
+*   **Render** 
+*   **Leaflet.js** 
 
 ---
 
