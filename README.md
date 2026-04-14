@@ -1,80 +1,98 @@
-# APSRTC Smart Public Transport Management System
+# Smart Public Transport System: APSRTC Digital Portal
 
-A high-performance, real-time logistics and transit management platform designed for the **Andhra Pradesh State Road Transport Corporation (APSRTC)**. This system digitizes the bridge between passengers looking for live bus updates and conductors managing ground-truth occupancy.
-
----
-
-##  Frontend (The User Interface)
-The frontend is built as a **Single-Page Application (SPA)** that dynamically handles three distinct user flows:
-
-###  Key Interfaces
-*   **Passenger Portal**: Features an intuitive search engine with a real-time progress visualization for bus movement and a map view.
-*   **Conductor Dashboard**: A high-density POS-style interface for issuing digital tickets and updating seat counts.
-*   **Admin Command Center**: A statistical hub for monitoring revenue, staff performance, and service status.
-
-###  Design System
-*   **Aesthetics**: Modern Glassmorphism UI using APSRTC's official color palette (Transit Blue & APSRTC Red).
-*   **User Experience**: Fully responsive design with smooth transitions between modules.
-*   **Real-time Syncing**: Auto-polls the backend every 3 seconds to keep map data and seat charts accurate without page reloads.
+### Authors
+*   **[Your Name]** (Y22ACS473)
+*   Department of Computer Science and Engineering
+*   Bapatla Engineering College
 
 ---
 
-##  Backend (The Engine)
-The backend is a robust RESTful API built on **Node.js** and **Express.js**, designed for light-weight but scalable data transactions.
+### Implementation
+**Node.js API Server, SQLite Database, and Real-Time Logistics implementation.**
 
-###  Core API Endpoints
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/services` | Fetches all active bus services with live stop offsets. |
-| `POST` | `/api/tickets` | Generates a new digital ticket and calculates fare. |
-| `PATCH` | `/api/services/:no/gps` | Updates the live coordinates for a bus. |
-| `PATCH` | `/api/services/:no/occupancy` | Syncs the Men/Women/Student seat count. |
-| `POST` | `/api/login/admin` | Authenticates depot managers. |
-
-###  Data Architecture
-The system uses **SQLite3** for ACID-compliant storage with the following schema:
-*   **Services**: Routes, registration numbers, and current coordinates.
-*   **Stops**: Geographic halts with time-offset calculations.
-*   **Staff**: Secure credentials for conductors and admins.
-*   **Transactions**: Historic data for revenue audits.
+🔗 [https://github.com/Y22ACS473/smart-public-transport-system](https://github.com/Y22ACS473/smart-public-transport-system)
 
 ---
 
-## Installation & Local Deployment
+### Overview
+The **Smart Public Transport System** is a digital modernization project designed specifically for the **Andhra Pradesh State Road Transport Corporation (APSRTC)**. Traditional transport systems rely on static printed schedules, which often lead to uncertainty for passengers and inefficiency for staff. 
 
-### 1. Requirements
-*   **Node.js** (LTS version recommended)
-*   **SQLite3** (Driver included in project)
-
-### 2. Setup
-```bash
-# Clone the repo
-git clone https://github.com/Y22ACS473/smart-public-transport-system.git
-
-# Install dependencies
-npm install
-
-# Initialize Database (Runs schema setup & seeds initial data)
-node database.js
-
-# Start Server
-node server.js
-```
-
-### 3. Usage
-Access the app at `http://localhost:3000`. Use the following for testing:
-*   **Admin**: `admin` / `admin123`
-*   **Conductor**: `EID1001` / `1234`
+This system solves these issues by providing a synchronized platform where passengers can track live bus movements, conductors can issue digital tickets instantly, and depot managers can monitor real-time revenue and operations from a central dashboard.
 
 ---
 
-##  Future Roadmap
-*   **GPS Integration**: Integration with physical mobile GPS sensors for live tracking.
-*   **Payment Gateway**: Integration with UPI for cashless ticketing.
-*   **RFID Integration**: Smart tapping for seasonal bus passes.
-*   **ML Prediction**: Predictive arrival times based on historical traffic data.
+### Project Components
+
+#### 1. Backend API Server
+*   Built using **Node.js** and **Express.js**.
+*   Handles RESTful endpoints for real-time data sync.
+*   Authenticates staff and manages role-based access for Admins and Conductors.
+
+#### 2. Database Layer
+*   Uses **SQLite3** for lightweight, reliable relational storage.
+*   Stores services, live stops, staff credentials, and transaction logs.
+*   Ensures ACID compliance for financial ticketing data.
+
+#### 3. Frontend Web Application
+*   A high-performance **Single-Page Application (SPA)**.
+*   Features an intelligent search engine for all APSRTC stops across AP.
+*   Visualizes real-time bus progression using time-offset logic.
 
 ---
 
-##  Project Authorship
-This project showcases the modernization of public transit in Andhra Pradesh through web-based digital solutions. Designed for high efficiency and low maintenance for the APSRTC network.
+### System Architecture
+The system integrates a **Node.js Gateway**, a **Relational SQLite Database**, and a **Glassmorphism-styled Frontend**. These components work together to simulate live transit logistics, calculating bus positions every 3 seconds to ensure passengers wait less and transport authorities earn more efficiently.
+
+---
+
+### Technologies Used
+
+#### Backend
+*   **Node.js**
+*   **Express.js**
+*   **SQLite3**
+*   **CORS**
+*   **Path Management**
+
+#### Frontend
+*   **HTML5 & CSS3** (Vanilla implementation)
+*   **JavaScript ES6+**
+*   **Glassmorphism Design System**
+
+#### Cloud & Services
+*   **GitHub** (Version Control)
+*   **Render** (Target Deployment)
+*   **Leaflet.js** (Mapping Visualization)
+
+---
+
+### Key Features
+*   **AI-ready Transit Logic**: Simulated live tracking based on departure offsets.
+*   **Digital Point-of-Sale (POS)**: Conductor-side instant ticket generation.
+*   **Real-time Occupancy Sync**: Monitors Men, Women, and Student counts for state audits.
+*   **Dynamic Route Inquiry**: Intelligent stop filtering for any origin-destination pair.
+*   **Administrative Telemetry**: Live stats on revenue, staff, and active bus services.
+
+---
+
+### Research Contribution
+This project demonstrates how lightweight web technologies and robust backend logic can modernize a state-wide transit network. By providing a "Single Source of Truth" via a central database, the project proves that digital transparency can significantly improve public utility efficiency.
+
+**Department of Computer Science and Engineering**
+**Bapatla Engineering College**
+
+---
+
+### Future Work
+*   **Physical GPS Integration**: Moving from simulation to real sensor hardware.
+*   **UPI Payment Gateway**: Support for cashless digital payments.
+*   **Multilingual Support**: Telugu interface for broader accessibility in rural AP.
+*   **Mobile Application**: Flutter-based app for real-time passenger notifications.
+*   **Predictive Analytics**: Using historical data to predict delays due to traffic.
+
+---
+
+### GitHub Repository
+The source code for the Smart Public Transport System is available here:
+
+🔗 [https://github.com/Y22ACS473/smart-public-transport-system](https://github.com/Y22ACS473/smart-public-transport-system)
