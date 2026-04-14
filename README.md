@@ -1,30 +1,28 @@
-# APSRTC Smart Public Transport Management System 🚌
-[![Project Version](https://img.shields.io/badge/Version-2.0.0-blue.svg?style=for-the-badge)](https://github.com/Y22ACS473/smart-public-transport-system)
-[![Tech Stack](https://img.shields.io/badge/Stack-Node--Express--SQLite-red.svg?style=for-the-badge)](https://nodejs.org/)
+# APSRTC Smart Public Transport Management System
 
 A high-performance, real-time logistics and transit management platform designed for the **Andhra Pradesh State Road Transport Corporation (APSRTC)**. This system digitizes the bridge between passengers looking for live bus updates and conductors managing ground-truth occupancy.
 
 ---
 
-## 🎨 Frontend (The User Interface)
+##  Frontend (The User Interface)
 The frontend is built as a **Single-Page Application (SPA)** that dynamically handles three distinct user flows:
 
-### 📱 Key Interfaces
+###  Key Interfaces
 *   **Passenger Portal**: Features an intuitive search engine with a real-time progress visualization for bus movement and a map view.
 *   **Conductor Dashboard**: A high-density POS-style interface for issuing digital tickets and updating seat counts.
 *   **Admin Command Center**: A statistical hub for monitoring revenue, staff performance, and service status.
 
-### 🎨 Design System
+###  Design System
 *   **Aesthetics**: Modern Glassmorphism UI using APSRTC's official color palette (Transit Blue & APSRTC Red).
 *   **User Experience**: Fully responsive design with smooth transitions between modules.
 *   **Real-time Syncing**: Auto-polls the backend every 3 seconds to keep map data and seat charts accurate without page reloads.
 
 ---
 
-## ⚙️ Backend (The Engine)
+##  Backend (The Engine)
 The backend is a robust RESTful API built on **Node.js** and **Express.js**, designed for light-weight but scalable data transactions.
 
-### 🔌 Core API Endpoints
+###  Core API Endpoints
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
 | `GET` | `/api/services` | Fetches all active bus services with live stop offsets. |
@@ -33,7 +31,7 @@ The backend is a robust RESTful API built on **Node.js** and **Express.js**, des
 | `PATCH` | `/api/services/:no/occupancy` | Syncs the Men/Women/Student seat count. |
 | `POST` | `/api/login/admin` | Authenticates depot managers. |
 
-### 🏗️ Data Architecture
+###  Data Architecture
 The system uses **SQLite3** for ACID-compliant storage with the following schema:
 *   **Services**: Routes, registration numbers, and current coordinates.
 *   **Stops**: Geographic halts with time-offset calculations.
@@ -42,7 +40,7 @@ The system uses **SQLite3** for ACID-compliant storage with the following schema
 
 ---
 
-## 🚀 Installation & Local Deployment
+## Installation & Local Deployment
 
 ### 1. Requirements
 *   **Node.js** (LTS version recommended)
@@ -70,7 +68,7 @@ Access the app at `http://localhost:3000`. Use the following for testing:
 
 ---
 
-## 🔮 Future Roadmap
+##  Future Roadmap
 *   **GPS Integration**: Integration with physical mobile GPS sensors for live tracking.
 *   **Payment Gateway**: Integration with UPI for cashless ticketing.
 *   **RFID Integration**: Smart tapping for seasonal bus passes.
@@ -78,5 +76,5 @@ Access the app at `http://localhost:3000`. Use the following for testing:
 
 ---
 
-## 🤝 Project Authorship
+##  Project Authorship
 This project showcases the modernization of public transit in Andhra Pradesh through web-based digital solutions. Designed for high efficiency and low maintenance for the APSRTC network.
